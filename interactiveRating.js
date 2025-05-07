@@ -1,12 +1,14 @@
 const howDid = document.querySelector(".default");
 const howDidbtns = document.querySelectorAll(".default div button");
 const thank = document.querySelector(".thank-you");
+const thankImg = document.querySelector(".thank-you span img");
 const submit = document.querySelector('button[type="submit"]');
 const rate = document.querySelector(".selected");
 
 function thanks() {
   howDid.classList.add("d-none");
   thank.classList.remove("d-none");
+  thank.style = "animation: transformate 2s ease-out;";
 }
 
 howDidbtns.forEach((rateBtn) => {
@@ -16,12 +18,15 @@ howDidbtns.forEach((rateBtn) => {
   );
 });
 
-// text for the empty selected class and go to thank you
 submit.addEventListener("click", (e) => {
-  thank.style = " transition: display 0.2s ease;";
   e.preventDefault();
-  // to prevent the selected class from being empty.
   rate.textContent !== ""
     ? thanks()
     : alert("Please 🙏 let us know how we did.");
+});
+
+thankImg.addEventListener("click", () => {
+  howDid.classList.remove("d-none");
+  thank.classList.toggle("d-none");
+  rate.textContent = "";
 });

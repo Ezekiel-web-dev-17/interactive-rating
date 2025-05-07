@@ -151,6 +151,12 @@ button[type^="submit"] {
     height: 45px;
   }
 
+  .img {
+    padding: 12px;
+    max-width: 35px;
+    max-height: 35px;
+    margin-right: -80px;
+  }
   h1 {
     font-size: 1.6em;
     line-height: 28px;
@@ -182,5 +188,17 @@ button[type^="submit"] {
 @media (width <= 360px) {
   main {
     height: 395px;
+  }
+}
+
+@keyframes transformate {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }

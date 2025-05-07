@@ -17,7 +17,9 @@ howDidbtns.forEach((rateBtn) => {
 });
 
 // text for the empty selected class and go to thank you
-submit.addEventListener("click", () => {
+submit.addEventListener("click", (e) => {
+  thank.style = " transition: display 0.2s ease;";
+  e.preventDefault();
   // to prevent the selected class from being empty.
   rate.textContent !== ""
     ? thanks()

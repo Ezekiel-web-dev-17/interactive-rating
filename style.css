@@ -178,3 +178,9 @@ button[type^="submit"] {
     font-size: 14px;
   }
 }
+
+@media (width <= 360px) {
+  main {
+    height: 395px;
+  }
+}

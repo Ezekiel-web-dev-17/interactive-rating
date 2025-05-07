@@ -126,7 +126,7 @@ button[type^="submit"] {
   display: none;
 }
 
-@media (width >= 375px) {
+@media (width <= 375px) {
   body {
     width: 100%;
     padding-top: 120px;

@@ -11,6 +11,10 @@ function thanks() {
   thank.style = "animation: transformate 2s ease-out;";
 }
 
+const err = new Error();
+err.name = "400";
+err.message = "No input!";
+
 howDidbtns.forEach((rateBtn) => {
   rateBtn.addEventListener(
     "click",
@@ -22,7 +26,7 @@ submit.addEventListener("click", (e) => {
   e.preventDefault();
   rate.textContent !== ""
     ? thanks()
-    : alert("Please 🙏 let us know how we did.");
+    : alert(`Error ${err.name}: ${err.message}`);
 });
 
 thankImg.addEventListener("click", () => {
